@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "itineraries",
+  "info": {
+    "singularName": "itinerary",
+    "pluralName": "itineraries",
+    "displayName": "Itinerary",
+    "description": "Travel itineraries and route planning"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "days": {
+      "type": "integer",
+      "required": true
+    },
+    "route": {
+      "type": "json",
+      "required": true
+    },
+    "budget": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.budget"
+    },
+    "bestSeason": {
+      "type": "json"
+    },
+    "relatedPlaces": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::place.place"
+    }
+  }
+}

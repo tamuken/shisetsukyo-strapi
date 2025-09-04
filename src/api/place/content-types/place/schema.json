@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "places",
+  "info": {
+    "singularName": "place",
+    "pluralName": "places",
+    "displayName": "Place",
+    "description": "Tourist attractions, restaurants, and accommodations"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "prefecture": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": ["temple", "shrine", "museum", "garden", "restaurant", "cafe", "hotel", "ryokan"],
+      "required": true
+    },
+    "location": {
+      "type": "json"
+    },
+    "openingHours": {
+      "type": "text"
+    },
+    "fee": {
+      "type": "text"
+    },
+    "photos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "officialUrl": {
+      "type": "string"
+    }
+  }
+}

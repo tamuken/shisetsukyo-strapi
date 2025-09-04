@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_shared_budgets",
+  "info": {
+    "name": "Budget",
+    "icon": "money-bill",
+    "displayName": "Budget",
+    "description": "Budget information for itineraries"
+  },
+  "options": {},
+  "attributes": {
+    "min": {
+      "type": "integer"
+    },
+    "max": {
+      "type": "integer"
+    },
+    "currency": {
+      "type": "string",
+      "default": "JPY"
+    }
+  }
+}

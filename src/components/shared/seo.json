@@ -21,6 +21,12 @@
       "multiple": false,
       "required": false,
       "allowedTypes": ["images"]
+    },
+    "canonical": {
+      "type": "string"
+    },
+    "jsonLd": {
+      "type": "json"
     }
   }
 }
